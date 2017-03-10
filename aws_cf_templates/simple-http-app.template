@@ -485,9 +485,7 @@
         "Listeners": [
           {
             "LoadBalancerPort": "80",
-            "InstancePort": {
-              "Ref": "ApplicationPort"
-            },
+            "InstancePort": "80",
             "Protocol": "HTTP"
           }
         ],
