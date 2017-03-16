@@ -1,0 +1,266 @@
+{
+  "AWSTemplateFormatVersion": "2010-09-09",
+  "Metadata": {
+    "AWS::CloudFormation::Designer": {
+      "060c4ab6-dbbd-471f-99d9-605a226be4e7": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 250,
+          "y": 170
+        },
+        "z": 2,
+        "parent": "17a22408-abe3-4d9d-8c76-766d68a35878",
+        "embeds": [],
+        "isrelatedto": [
+          "1769b08b-4a0c-4999-baf3-7018e456c2c8",
+          "17a22408-abe3-4d9d-8c76-766d68a35878",
+          "1e0cb261-43bb-453f-b28c-cdba9068be18"
+        ]
+      },
+      "0548466a-7343-4fc4-98be-2128dbcb06cf": {
+        "source": {
+          "id": "c4293266-5b30-4ea2-91b6-880653a2cac1"
+        },
+        "target": {
+          "id": "1769b08b-4a0c-4999-baf3-7018e456c2c8"
+        },
+        "z": 2
+      },
+      "b29e3425-17bf-4570-8ac3-d8afa040cf71": {
+        "source": {
+          "id": "4cd9315a-4d0d-4cdb-b365-fb236a40e075"
+        },
+        "target": {
+          "id": "060c4ab6-dbbd-471f-99d9-605a226be4e7"
+        },
+        "z": 2
+      },
+      "6cb3b579-c4bf-4398-aa50-219a6e6f4855": {
+        "source": {
+          "id": "060c4ab6-dbbd-471f-99d9-605a226be4e7"
+        },
+        "target": {
+          "id": "1769b08b-4a0c-4999-baf3-7018e456c2c8"
+        },
+        "z": 1
+      },
+      "43e5b670-b76c-467f-b8d8-2dc0c416e225": {
+        "source": {
+          "id": "1769b08b-4a0c-4999-baf3-7018e456c2c8"
+        },
+        "target": {
+          "id": "060c4ab6-dbbd-471f-99d9-605a226be4e7"
+        },
+        "z": 0
+      },
+      "fcee02da-e1f8-4326-b45e-140dc8740455": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 250,
+          "y": 260
+        },
+        "z": 2,
+        "parent": "17a22408-abe3-4d9d-8c76-766d68a35878",
+        "embeds": [],
+        "dependson": [
+          "060c4ab6-dbbd-471f-99d9-605a226be4e7"
+        ],
+        "isrelatedto": [
+          "060c4ab6-dbbd-471f-99d9-605a226be4e7",
+          "17a22408-abe3-4d9d-8c76-766d68a35878",
+          "1e0cb261-43bb-453f-b28c-cdba9068be18"
+        ]
+      },
+      "5569ec29-4e81-4e64-9b57-2716f6940fd3": {
+        "source": {
+          "id": "fcee02da-e1f8-4326-b45e-140dc8740455"
+        },
+        "target": {
+          "id": "060c4ab6-dbbd-471f-99d9-605a226be4e7"
+        },
+        "z": 11
+      },
+      "17a22408-abe3-4d9d-8c76-766d68a35878": {
+        "size": {
+          "width": 190,
+          "height": 210
+        },
+        "position": {
+          "x": 240,
+          "y": 150
+        },
+        "z": 1,
+        "embeds": [
+          "060c4ab6-dbbd-471f-99d9-605a226be4e7",
+          "6ca6bd5b-2167-4624-9098-cb4ab30a597e",
+          "fcee02da-e1f8-4326-b45e-140dc8740455"
+        ]
+      },
+      "1e0cb261-43bb-453f-b28c-cdba9068be18": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 130,
+          "y": 230
+        },
+        "z": 1,
+        "embeds": [],
+        "dependson": [
+          "17a22408-abe3-4d9d-8c76-766d68a35878"
+        ]
+      },
+      "7821f6b9-0b92-4d25-8b3f-e3ce4f22dde8": {
+        "source": {
+          "id": "1e0cb261-43bb-453f-b28c-cdba9068be18"
+        },
+        "target": {
+          "id": "17a22408-abe3-4d9d-8c76-766d68a35878"
+        },
+        "z": 3
+      },
+      "6ca6bd5b-2167-4624-9098-cb4ab30a597e": {
+        "size": {
+          "width": 60,
+          "height": 60
+        },
+        "position": {
+          "x": 360,
+          "y": 260
+        },
+        "z": 2,
+        "parent": "17a22408-abe3-4d9d-8c76-766d68a35878",
+        "embeds": [],
+        "isrelatedto": [
+          "17a22408-abe3-4d9d-8c76-766d68a35878",
+          "1e0cb261-43bb-453f-b28c-cdba9068be18",
+          "060c4ab6-dbbd-471f-99d9-605a226be4e7"
+        ]
+      }
+    }
+  },
+  "Resources": {
+    "PublicDmzStack": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3-us-west-2.amazonaws.com/stacks-bytepitch/public-dmz.template",
+        "Parameters": {
+          "KeyName": "personal-aws",
+          "Region": "us-west",
+          "InternetGatewayId": {
+            "Ref": "InternetGateway"
+          },
+          "VpcId": {
+            "Ref": "Vpc"
+          },
+          "VpcCidrBlock": "10.0.0.0/16",
+          "PublicDmzCidrBlock": "10.0.0.0/24"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "060c4ab6-dbbd-471f-99d9-605a226be4e7"
+        }
+      }
+    },
+    "AppQaEnvironmentStack": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3-us-west-2.amazonaws.com/stacks-bytepitch/simple-http-app.template",
+        "Parameters": {
+          "ApplicationName": "Example application",
+          "ApplicationPort": "8080",
+          "Environment": "QA",
+          "Region": "us-west",
+          "VpcId": {
+            "Ref": "Vpc"
+          },
+          "VpcCidrBlock": "10.0.0.0/16",
+          "PrivateSubnet1CidrBlock": "10.0.1.0/24",
+          "PrivateSubnet2CidrBlock": "10.0.2.0/24",
+          "LoadBalancerSubnet1CidrBlock": "10.0.3.0/24",
+          "LoadBalancerSubnet2CidrBlock": "10.0.4.0/24",
+          "NatInstanceId": {
+            "Fn::GetAtt": [
+              "PublicDmzStack",
+              "Outputs.NatInstanceId"
+            ]
+          },
+          "KeyName": "personal-aws",
+          "HealthCheckTarget": "HTTP:8080/health"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "fcee02da-e1f8-4326-b45e-140dc8740455"
+        }
+      },
+      "DependsOn": [
+        "PublicDmzStack"
+      ]
+    },
+    "Vpc": {
+      "Type": "AWS::EC2::VPC",
+      "Properties": {
+        "CidrBlock": "10.0.0.0/16"
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "17a22408-abe3-4d9d-8c76-766d68a35878"
+        }
+      }
+    },
+    "InternetGateway": {
+      "Type": "AWS::EC2::InternetGateway",
+      "Properties": {},
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "1e0cb261-43bb-453f-b28c-cdba9068be18"
+        }
+      },
+      "DependsOn": [
+        "Vpc"
+      ]
+    },
+    "AppProdEnvironmentStack": {
+      "Type": "AWS::CloudFormation::Stack",
+      "Properties": {
+        "TemplateURL": "https://s3-us-west-2.amazonaws.com/stacks-bytepitch/simple-http-app.template",
+        "Parameters": {
+          "ApplicationName": "Example application",
+          "ApplicationPort": "8080",
+          "Environment": "Prod",
+          "Region": "us-west",
+          "VpcId": {
+            "Ref": "Vpc"
+          },
+          "VpcCidrBlock": "10.0.0.0/16",
+          "PrivateSubnet1CidrBlock": "10.0.11.0/24",
+          "PrivateSubnet2CidrBlock": "10.0.12.0/24",
+          "LoadBalancerSubnet1CidrBlock": "10.0.13.0/24",
+          "LoadBalancerSubnet2CidrBlock": "10.0.14.0/24",
+          "NatInstanceId": {
+            "Fn::GetAtt": [
+              "PublicDmzStack",
+              "Outputs.NatInstanceId"
+            ]
+          },
+          "KeyName": "personal-aws",
+          "HealthCheckTarget": "HTTP:8080/health"
+        }
+      },
+      "Metadata": {
+        "AWS::CloudFormation::Designer": {
+          "id": "6ca6bd5b-2167-4624-9098-cb4ab30a597e"
+        }
+      }
+    }
+  }
+}
