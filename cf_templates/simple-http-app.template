@@ -295,8 +295,8 @@
       "Description": "VPC ID to attach the resources",
       "Type": "String"
     },
-    "InternetGatewayId": {
-      "Description": "Internet Gateway ID",
+    "NatInstanceId": {
+      "Description": "NAT instance ID",
       "Type": "String"
     },
     "VpcCidrBlock": {
@@ -644,8 +644,8 @@
           "Ref": "LoadBalancerRouteTable"
         },
         "DestinationCidrBlock": "0.0.0.0/0",
-        "GatewayId": {
-          "Ref": "InternetGatewayId"
+        "InstanceId": {
+          "Ref": "NatInstanceId"
         }
       },
       "Metadata": {
@@ -705,8 +705,8 @@
         "RouteTableId": {
           "Ref": "PrivateRouteTable"
         },
-        "GatewayId": {
-          "Ref": "InternetGatewayId"
+        "InstanceId": {
+          "Ref": "NatInstanceId"
         },
         "DestinationCidrBlock": "0.0.0.0/0"
       },
